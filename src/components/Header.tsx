@@ -29,7 +29,7 @@ export default function Header({ search, onSearchChange, onAddComponent, dark = 
             </svg>
           }
         />
-        <Button onClick={onAddComponent} className="ml-2">Add Component</Button>
+      
       </div>
     </header>
   )
