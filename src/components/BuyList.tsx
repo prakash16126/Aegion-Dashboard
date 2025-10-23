@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react'
+import { Button } from './ui/button'
 
 type Row = {
   id: number
@@ -36,8 +37,14 @@ export default function BuyList({ rows = DEFAULT_ROWS, onAdd, search = '' }: Pro
 
   return (
     <div className="p-6">
-      <div className="mb-6">
+      <div className="mb-6 flex items-center justify-between">
         <button className="border border-black rounded px-6 py-2 font-semibold bg-white dark:bg-gray-700 dark:text-gray-100">Buy List</button>
+        <Button 
+          onClick={onAdd}
+          className="bg-green-600 hover:bg-green-700 text-white dark:bg-green-600 dark:hover:bg-green-700"
+        >
+          Add Components
+        </Button>
       </div>
 
       <div className="bg-white rounded-lg p-4 dark:bg-gray-800 dark:border dark:border-gray-700">
